@@ -55,6 +55,7 @@ export default function TripDashboard({ user, signOutPath, sharedReady = true }:
       setSync("synced");
     } catch {
       setSync("error");
+      window.alert("保存未成功，请检查网络或编辑口令后重试。当前改动尚未写入云端。");
     }
   }
 
